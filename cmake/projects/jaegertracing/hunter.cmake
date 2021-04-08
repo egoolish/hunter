@@ -10,7 +10,7 @@ hunter_add_version(
     PACKAGE_NAME jaegertracing
     VERSION "0.7.1"
     URL "https://github.com/egoolish/jaeger-client-cpp/archive/refs/tags/v0.7.1_custom.tar.gz"
-    SHA1 "892e0083cb35353a778a3b281957af6b3fdfd8c0")
+    SHA1 "8c940764cb026922a4bd9a4a9233ef9984446062")
 
 hunter_cmake_args(jaegertracing CMAKE_ARGS
     BUILD_TESTING=OFF)
