@@ -96,6 +96,8 @@ hunter_add_version(
     20019f1dbfb154956067aa1df0e73e5185d794fa
 )
 
+hunter_cmake_args(ZLIB CMAKE_ARGS -DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=true)
+
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(ZLIB)
 string(FIND "${HUNTER_ZLIB_VERSION}" "chromium" HUNTER_ZLIB_IS_CHROMIUM)
