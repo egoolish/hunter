@@ -8,6 +8,8 @@ include(hunter_cacheable)
 include(hunter_download)
 include(hunter_pick_scheme)
 
+set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
+
 hunter_add_version(
     PACKAGE_NAME
     ZLIB
@@ -96,7 +98,7 @@ hunter_add_version(
     20019f1dbfb154956067aa1df0e73e5185d794fa
 )
 
-hunter_cmake_args(ZLIB CMAKE_ARGS -DCMAKE_POSITION_INDEPENDENT_CODE=on -DCMAKE_CXX_FLAGS="-fPIC")
+hunter_cmake_args(ZLIB CMAKE_ARGS -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_CXX_FLAGS=-fPIC -DCMAKE_C_FLAGS=-fPIC -DCFLAGS=-fPIC -DCXXFLAGS=-fPIC)
 set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
