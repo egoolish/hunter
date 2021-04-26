@@ -77,7 +77,14 @@ hunter_cmake_args(
   CMAKE_ARGS
     YAML_CPP_BUILD_TESTS=OFF
     YAML_CPP_BUILD_TOOLS=OFF
-  )
+    BUILD_SHARED_LIBS=ON
+    CMAKE_POSITION_INDEPENDENT_CODE=ON
+    CMAKE_CXX_FLAGS=-fPIC
+    CMAKE_C_FLAGS=-fPIC
+    CFLAGS=-fPIC
+    CXXFLAGS=-fPIC
+)
+set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(yaml-cpp)
 hunter_download(PACKAGE_NAME yaml-cpp)
