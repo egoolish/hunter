@@ -54,9 +54,19 @@ hunter_add_version(
     URL "https://github.com/opentracing/opentracing-cpp/archive/v1.6.0.tar.gz"
     SHA1 "f5dccf21dc05cddb6205164a8fd3cf210926ef6c")
 
-hunter_cmake_args(opentracing-cpp CMAKE_ARGS
-    BUILD_TESTING=OFF ENABLE_LINTING=OFF BUILD_SHARED_LIBS=ON CMAKE_POSITION_INDEPENDENT_CODE=ON CMAKE_CXX_FLAGS=-fPIC CMAKE_C_FLAGS=-fPIC CFLAGS=-fPIC CXXFLAGS=-fPIC)
-set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
+hunter_cmake_args(
+  opentracing-cpp
+  CMAKE_ARGS
+  BUILD_TESTING=OFF
+  ENABLE_LINTING=OFF
+  BUILD_SHARED_LIBS=ON
+)
+#   CMAKE_POSITION_INDEPENDENT_CODE=ON
+#   CMAKE_CXX_FLAGS=-fPIC
+#   CMAKE_C_FLAGS=-fPIC
+#   CFLAGS=-fPIC
+#   CXXFLAGS=-fPIC)
+# set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(opentracing-cpp)
